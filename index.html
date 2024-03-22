@@ -9,7 +9,7 @@
 
 var ender = 'RUA ANGELO FRANCISCHETT, 121, CASA BRANCA - SP - Brasil';
 
-var txtInfo = ender;
+//var txtInfo = ender;
 $('#txtInfo').val(ender);
 alert("ender: "+ender);	  
 	    
@@ -33,17 +33,13 @@ alert("ender: "+ender);
 				$('#txtInfo').val('Só é permitido obter a geolocalização em sites https');
 				return;
 			}
-			
+
+	 alert("obtendo geolocalização...");
 			$('#txtInfo').val('obtendo geolocalização...');
 
 			navigator.geolocation.getCurrentPosition(function (position) {
 
-				var texto = 'latitude=' + position.coords.latitude + '\r\n' +
-				'longitude=' + position.coords.longitude + '\r\n' +
-				'precisao=' + position.coords.accuracy + ' metros\r\n' +
-				'velocidade=' + position.coords.speed + ' metros/segundo\r\n' +
-				'altitude=' + position.coords.altitude + ' metros\r\n' +
-				'precisaoAltitude=' + position.coords.altitudeAccuracy;
+				var texto = 'fim';
 
 				$('#txtInfo').val(texto);
 			});
