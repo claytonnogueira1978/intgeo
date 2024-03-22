@@ -6,17 +6,22 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script type="text/javascript">
 
-		  function recebeend()	{
 
 var ender = 'RUA ANGELO FRANCISCHETT, 121, CASA BRANCA - SP - Brasil';
 
 var txtInfo = ender;
 $('#txtInfo').val(ender);
+alert("txtInfo: "+txtInfo);	    
+		  function recebeend()	{
+
+
 //$('#txtInfo').val('ender');
 
 		}
 
  function obterGeolocalizacao()	{
+
+	 alert("obterGeolocalizacao: "+txtInfo);
 	
 							if (!navigator.geolocation) {
 				$('#txtInfo').val('Não foi possível obter a sua geolocalização');
