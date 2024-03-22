@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Lat e Long</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript">
+
+		  function recebeend()	{
+
+var ender = 'RUA ANGELO FRANCISCHETT, 121, CASA BRANCA - SP - Brasil';
+
+var txtInfo = ender;
+$('#txtInfo').val(ender);
+//$('#txtInfo').val('ender');
+
+		}
+
+ function obterGeolocalizacao()	{
+	
+							if (!navigator.geolocation) {
+				$('#txtInfo').val('Não foi possível obter a sua geolocalização');
+				return;
+			}
+
+			if (location.protocol != 'https:') {
+				$('#txtInfo').val('Só é permitido obter a geolocalização em sites https');
+				return;
+			}
+			
+			$('#txtInfo').val('obtendo geolocalização...');
+
+			navigator.geolocation.getCurrentPosition(function (position) {
+
+				var texto = 'latitude=' + position.coords.latitude + '\r\n' +
+				'longitude=' + position.coords.longitude + '\r\n' +
+				'precisao=' + position.coords.accuracy + ' metros\r\n' +
+				'velocidade=' + position.coords.speed + ' metros/segundo\r\n' +
+				'altitude=' + position.coords.altitude + ' metros\r\n' +
+				'precisaoAltitude=' + position.coords.altitudeAccuracy;
+
+				$('#txtInfo').val(texto);
+			});
+		}
+		
+		
+    </script>
+</head>
+<!--
+<body>
+<textarea id="txtInfo" rows="6" cols="50"></textarea> 
+<input type="button" value="aObter geolocalização" onclick="obterGeolocalizacao();" />
+
+</body>
+
+-->
+
+<body onload="recebeend()">
+<textarea id="txtInfo" rows="6" cols="50"></textarea> 
+<input type="button" value="2 Obter geolocalização" onclick="obterGeolocalizacao();" />
+
+</body>
+
+</html>
+
+
+<!--
+<body onload="obterGeolocalizacao()">
+<textarea id="txtInfo" rows="6" cols="50"></textarea> 
+    <form action="#" onsubmit="showAddress(this.address.value); return false">
+      <p>
+
+      
+      </p>
+      <div id="map_canvas" style="width: 100%; height: 500px" maptype="roadmap"></div>
+    </form>
+  </body>-->  
