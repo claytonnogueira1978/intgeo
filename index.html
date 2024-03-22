@@ -17,13 +17,16 @@ var ender;
 		  function recebeend()	{
 
 ender = 'RUA ANGELO FRANCISCHETT, 121, CASA BRANCA - SP - Brasil';
-var txtInfo = ender;
-alert("txtInfo: "+txtInfo);
-alert("ender: "+ender);	  
-	
-alert("2 txtInfo: "+$('#txtInfo').val());	
+$('#txtInfo').val('xcvxcvxcv');
 
-			  $('#txtInfo').val(ender);
+//ender = 'RUA ANGELO FRANCISCHETT, 121, CASA BRANCA - SP - Brasil';
+//var txtInfo = ender;
+//alert("txtInfo: "+txtInfo);
+//alert("ender: "+ender);	  
+	
+//alert("2 txtInfo: "+$('#txtInfo').val());	
+
+//$('#txtInfo').val(ender);
 alert("3 txtInfo: "+$('#txtInfo').val());	
 
 
@@ -66,7 +69,7 @@ alert("3 txtInfo: "+$('#txtInfo').val());
 </head>
 
 <body>
-<textarea id="txtInfo" value="teste" rows="6" cols="50"></textarea> 
+<textarea id="txtInfo" name="txtInfo" rows="6" cols="50"></textarea> 
 <input type="button" value="Receve end" onclick="recebeend();" />
 <input type="button" value="2 Obter geolocalização" onclick="obterGeolocalizacao();" />
 </body>
