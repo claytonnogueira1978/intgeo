@@ -7,16 +7,17 @@
     <script type="text/javascript">
 
 
-var ender = 'RUA ANGELO FRANCISCHETT, 121, CASA BRANCA - SP - Brasil';
+var ender;
 
 //var txtInfo = ender;
-$('#txtInfo').val(ender);
+//$('#txtInfo').val(ender);
 	    
 		  function recebeend()	{
 
+ender = 'RUA ANGELO FRANCISCHETT, 121, CASA BRANCA - SP - Brasil';
 alert("ender: "+ender);	  
+$('#txtInfo').val('ender');
 
-//$('#txtInfo').val('ender');
 
 		}
 
@@ -25,11 +26,13 @@ alert("ender: "+ender);
 	 alert("obterGeolocalizacao: "+txtInfo);
 	
 							if (!navigator.geolocation) {
+								alert("1");
 				$('#txtInfo').val('Não foi possível obter a sua geolocalização');
 				return;
 			}
 
 			if (location.protocol != 'https:') {
+				alert("2");
 				$('#txtInfo').val('Só é permitido obter a geolocalização em sites https');
 				return;
 			}
@@ -42,10 +45,12 @@ alert("ender: "+ender);
 				 alert(" getCurrentPosition...");
 	
 
-				var texto = 'fim';
+				var texto = 'ok';
+				alert("ok");
 
 				$('#txtInfo').val(texto);
 			});
+	 alert("fim");
 		}
 		
 		
