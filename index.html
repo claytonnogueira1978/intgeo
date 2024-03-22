@@ -11,10 +11,10 @@ var ender = 'RUA ANGELO FRANCISCHETT, 121, CASA BRANCA - SP - Brasil';
 
 //var txtInfo = ender;
 $('#txtInfo').val(ender);
-alert("ender: "+ender);	  
 	    
 		  function recebeend()	{
 
+alert("ender: "+ender);	  
 
 //$('#txtInfo').val('ender');
 
@@ -38,6 +38,9 @@ alert("ender: "+ender);
 			$('#txtInfo').val('obtendo geolocalização...');
 
 			navigator.geolocation.getCurrentPosition(function (position) {
+
+				 alert(" getCurrentPosition...");
+	
 
 				var texto = 'fim';
 
