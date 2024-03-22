@@ -6,8 +6,10 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script type="text/javascript">
 
+	    
 		  function recebeend()	{
 
+			  alert("recebeend: ");
 var ender = 'RUA ANGELO FRANCISCHETT, 121, CASA BRANCA - SP - Brasil';
 
 var txtInfo = ender;
@@ -50,7 +52,7 @@ $('#txtInfo').val(ender);
 
 <body onload="recebeend()">
 <textarea id="txtInfo" rows="6" cols="50"></textarea> 
-<input type="button" value="Oiibter geolocalização" onclick="obterGeolocalizacao();" />
+<input type="button" value="Obter geolocalização" onclick="obterGeolocalizacao();" />
 
 </body>
 
